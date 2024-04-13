@@ -1,5 +1,6 @@
 from pathlib import Path
 from dotenv import load_dotenv
+from tensorflow.keras.models import load_model
 import os
 
 load_dotenv()
@@ -113,3 +114,15 @@ STATICFILES_DIRS = [BASE_DIR / "src"]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# Model
+
+MODEL_PATH = os.path.join(STATIC_ROOT, 'mnist-dense_second.hdf5')
+
+# Загрузка модели
+MODEL = load_model(MODEL_PATH)
+
+# Группы
+
+GROUPS = ['Археология', 'Оружие', 'Прочие', 'Нумизматика', 'Фото, негативы', 'Редкие книги', 'Документы', 'Печатная продукция', 'ДПИ', 'Скульптура', 'Графика', 'Техника', 'Живопись', 'Естественнонауч.коллекция', 'Минералогия']
