@@ -37,6 +37,11 @@ _dev dependencies:_
 
 - pip install -r requirements/dev.txt
 
+**Env variables:**
+
+- cp .env.example .env
+**change some variables in .env file if you need it**
+
 **Go into project directory:**
 
 - cd neuro
@@ -44,6 +49,10 @@ _dev dependencies:_
 **Make migrations:**
 
 - python3 manage.py migrate
+
+**Collect static:**
+
+- python3 manage.py collectstatic
 
 **creating superuser:**
 
